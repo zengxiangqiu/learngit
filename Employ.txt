@@ -1,0 +1,7 @@
+
+1. 行政雇员 主档如何过TT，是否默认EmployID作为POSCode
+2. 邮件通知Support do something
+3. 扩展属性（比如J50账户），作为主档attribute属性添加
+4. 同步AD资料
+5. 批量修改资料
+6. PosCode的获取逻辑
