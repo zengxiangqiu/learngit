@@ -1,0 +1,2 @@
+ DJANGO 部署：UBUNTU+NGINX+GUNICORN (超赞)
+ http://www.huangwenchao.com.cn/2014/07/django-deploy-gunicorn.html
