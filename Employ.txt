@@ -1,7 +1,17 @@
 
 1. 行政雇员 主档如何过TT，是否默认EmployID作为POSCode
-2. 邮件通知Support do something
-3. 扩展属性（比如J50账户），作为主档attribute属性添加
+答：Supporter反映他们只会在TT新增行政雇员，并且EmployID将作为雇员登陆TT的账户，销售雇员将由daily Job 过TT。
+2. 邮件通知Supporter 添加AD账户
+3. 扩展属性（比如J50账户），考虑作为主档attribute属性添加
 4. 同步AD资料
 5. 批量修改资料
 6. PosCode的获取逻辑
+答：此处列出最常用的logic 
+
+DECLARE @flag AS CHAR(1) SET @flag='C' 
+SELECT isnull(MAX(slcode),0)+1 AS POSCode FROM 
+(SELECT ISNULL(MAX(RIGHT(RTRIM(SLCode),7)),'0000000') AS slcode  FROM  dbo.tblSaLady 
+WHERE LEN(slcode)=8 AND SUBSTRING(slcode,2,1)<='9' AND LEFT(SLCode,1)=@flag 
+UNION  
+SELECT ISNULL(MAX(RIGHT(RTRIM(POScode),7)),'0000000') AS slcode FROM lsj50..vwSaldyNo
+WHERE LEN(POSCOde)=8 AND SUBSTRING(POSCOde,2,1)<='9' AND LEFT(POSCOde,1)=@flag and  brand='LS') AS s 
