@@ -1,0 +1,5 @@
+
+Tables 
+LSJ50.DBO.tblPOTMP
+
+1
