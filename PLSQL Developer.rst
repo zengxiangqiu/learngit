@@ -12,9 +12,9 @@ PL/SQL Developer
 
 安装后运行msi安装包
 
-** 常见错误 **
+**常见错误**
 
-1. 缺失 Oracle OCI ， 需下载 `Oracle Instant Client`_  ,版本应与服务器一致
+缺失 Oracle OCI ， 需下载 `Oracle Instant Client`_  ,版本应与服务器一致
 
 
 解压后设置以下3个环境参数，此处以windows系统为例
